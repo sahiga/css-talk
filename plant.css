@@ -1,0 +1,82 @@
+.plant-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.plant-slide:hover {
+    animation: skyrise 4s linear 5s forwards;
+}
+
+.plant-slide:hover .seedlings {
+    animation: grow 2s linear 15s forwards;
+}
+
+.plant-slide:hover .water {
+    animation: addWater 2s linear 10s forwards;
+}
+
+.plant-slide:hover .sun {
+    animation: sunrise 4s linear 2s forwards;
+}
+
+.plant-scene {
+    position: relative;
+    padding: 1em 0 0;
+    bottom: -90px;
+}
+
+.seedlings {
+    background: url('images/icon-seedling.svg');
+    width: 0;
+    height: 95px;
+    margin: 0 1em;
+    position: relative;
+    bottom: 60px;
+}
+
+.soil {
+    position: relative;
+    top: -89px;
+    left: -70px;
+    width: 120%;
+    height: 250px;
+    background: linear-gradient(#855406, #402A08);
+}
+
+.water {
+    width: 100%;
+    opacity: 0.8;
+    background: linear-gradient(#6acffe, cornflowerblue);
+    border-radius: 4px;
+}
+
+.sun {
+    position: relative;
+    width: 150px;
+    bottom: -180px;
+    left: 88%;
+    z-index: 0;
+}
+
+@keyframes grow {
+    from { width: 95px; }
+    to { width: calc(95px * 30); }
+}
+
+@keyframes addWater {
+    0% { height: 0; }
+    50% { height: 50%; }
+    100% { height: 0; }
+}
+
+@keyframes sunrise {
+    from { bottom: -180px; left: 88%; }
+    to { bottom: 200px; left: 40px; }
+}
+
+@keyframes skyrise {
+    from { background-color: transparent; }
+    to { background-color: cornflowerblue; }
+}

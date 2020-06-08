@@ -1,0 +1,202 @@
+/** SHAPES **/
+.example {
+    margin: 2em auto;
+    width: 300px;
+    height: 300px;
+}
+
+.three-d-shape {
+    margin: 0 auto;
+}
+
+/** Square examples **/
+.rounded-corners-example {
+    background: #fdbe34;
+    border-radius: 20px;
+}
+
+.gradient-example {
+    background: linear-gradient(#fdbe34, #fecf6a 50%, #fede99 60%, #eee 75%);
+    border-radius: 20px;
+}
+
+.drop-shadow-example {
+    background: #fecf6a;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #eeeeeeb5;
+}
+
+/** Triangle examples **/
+.triangle-example {
+    border-style: solid;
+    border-top-color: #fecf6a;
+}
+
+.triangle-box-full {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    border-width: 32px;
+    border-left-color: #6afecf;
+    border-right-color: #6acffe;
+    border-bottom-color: #cf6afe;
+}
+
+.triangle-box-empty {
+    width: 0;
+    height: 0;
+    border-width: 150px;
+    border-left-color: #6afecf;
+    border-right-color: #6acffe;
+    border-bottom-color: #cf6afe;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-width: 150px;
+    border-top-color: #fecf6a;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+/** Circle examples **/
+.circle-example {
+    background: #fdbe34;
+}
+
+.circle-mid {
+    border-radius: 100px;
+}
+
+.circle-complete {
+    border-radius: 100%;
+}
+
+/** Cylinder **/
+.cylinder-complete, .cylinder-example {
+    width: 180px;
+    height: 300px;
+    background: #fecf6a;
+    position: relative;
+}
+
+.cylinder-circle-step {
+    margin: 1em auto;
+}
+
+.cylinder-top-circle {
+    width: 180px;
+    height: 180px;
+    margin: 1em auto;
+    background: #fede99;
+    border-radius: 100%;
+}
+
+.cylinder-complete::before, .cylinder-mid::before, .cylinder-top-oval {
+    width: 180px;
+    height: 40px;
+    background: #fede99;
+    border-radius: 100%;
+}
+.cylinder-complete::before, .cylinder-mid::before {
+    position: absolute;
+    top: -19px;
+    left: 0;
+    content: '';
+}
+
+.cylinder-bottom-circle {
+    width: 180px;
+    height: 180px;
+    margin: 1em auto;
+    background: #fecf6a;
+    border-radius: 100%;
+}
+
+.cylinder-complete::after, .cylinder-bottom-oval {
+    width: 180px;
+    height: 53px;
+    background: #fecf6a;
+    border-radius: 100%;
+}
+
+.cylinder-complete::after {
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    content: '';
+}
+
+.arrow {
+    font-size: 3em;
+}
+
+/** Pyramid **/
+.pyramid {
+    position: relative;
+    top: -50px;
+    left: 50px;
+}
+
+.pyramid-front {
+    position: absolute;
+    top: -200px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 200px 150px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #6afecf;
+    transform: rotateY(52deg) rotateZ(-13deg);
+}
+
+.pyramid-side {
+    position: absolute;
+    left: 93px;
+    top: -234px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 240px 73px 238px 53px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #3de4af;
+    transform: rotateY(-50deg) rotateZ(40deg);
+}
+
+/** Cube **/
+.cube {
+    position: relative;
+    top: -50px;
+    left: -50px;
+}
+
+.cube-side {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-width: 40px 83px 36px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: #6acffe;
+    border-bottom-color: transparent;
+}
+
+.cube-front {
+    position: absolute;
+    left: 200px;
+    width: 0;
+    height: 200px;
+    border-style: solid;
+    border-width: 27px 125px 27px;
+    border-top-color: transparent;
+    border-left-color: cornflowerblue;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}

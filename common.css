@@ -1,0 +1,187 @@
+/** Common styles **/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    background: url('images/what-the-hex-dark.png');
+    color: #ddd;
+    overflow-x: hidden;
+}
+
+body, button, input {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+h1, figcaption, .panel-title {
+    text-align: center;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:not(.button-link) {
+    border-bottom: 1px solid #fecf6a;
+    color: cornflowerblue;
+}
+
+a:not(.button-link):hover {
+    color: #fecf6a;
+    border-bottom: 1px solid cornflowerblue;
+}
+
+p, .default-blockquote, figcaption, .default-list {
+    font-size: 2em;
+    line-height: 1.8em;
+}
+
+blockquote {
+    border-left: 8px solid #fecf6a;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+blockquote, .panel-title {
+    background: rgba(254, 207, 106, 0.9);
+    color: #222;
+}
+
+header {
+    margin: 2em 2em 0;
+}
+
+ol, ul, blockquote {
+    margin: 0;
+}
+
+em {
+    font-style: italic;
+}
+
+strong, .presentation-title {
+    color: #fecf6a;
+}
+
+.presentation-title {
+    text-align: left;
+    font-size: 5em;
+}
+
+.list-figcaption {
+    font-size: 1em;
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 3em;
+}
+
+.title-slide,
+.emphasis-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-slide {
+    padding: 8em;
+}
+
+.panels {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.panel {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 30%;
+    height: 75%;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.panel-image {
+    width: 100%;
+}
+
+.panel-title {
+    position: absolute;
+    bottom: 0;
+    padding: 1em;
+    width: 100%;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.websites {
+    display: block;
+    width: 66%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+.has-fade-in {
+    animation: fadeIn 1s linear;
+}
+
+.logos {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.logo {
+    display: block;
+    margin: 1em auto;
+    width: 100px;
+}

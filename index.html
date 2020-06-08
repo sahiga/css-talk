@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Why CSS Still Matters</title>
+    <link href="common.css" rel="stylesheet" type="text/css">
+    <link href="demos.css" rel="stylesheet" type="text/css">
+    <link href="building.css" rel="stylesheet" type="text/css">
+    <link href="shapes.css" rel="stylesheet" type="text/css">
+    <link href="soundwaves.css" rel="stylesheet" type="text/css">
+    <link href="plant.css" rel="stylesheet" type="text/css">
+    <style></style>
+</head>
+
+<body>
+    <main class="wrapper">
+        <section class="slide title-slide" id="slide-0">
+            <h1 class="presentation-title">Why CSS Still Matters</h1>
+            <p>
+                Stephanie A. Higa<br />
+                Senior Software Engineer @ Box<br />
+                WomenTech Global Conference 2020
+            </p>
+        </section>
+        <section class="slide has-subslides" id="slide-1">
+            <h1>What is CSS?</h1>
+            <div class="subslides">
+                <div class="hidden">
+                    <p>The Wikipedia definition:</p>
+                    <blockquote class="default-blockquote">
+                        “Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of
+                        a
+                        document
+                        written in a markup language like HTML.”
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section class="slide emphasis-slide" id="slide-2">
+            <h1>But what <em>is</em> CSS, really?</h1>
+        </section>
+        <section class="slide has-subslides" id="slide-3">
+            <h1>If you think of a building&hellip;</h1>
+            <div class="subslides panels">
+                <div class="panel hidden" style="background-image: url('images/construction.jpg')">
+                    <p class="panel-title">
+                        HTML
+                    </p>
+                </div>
+                <div class="panel hidden" style="background-image: url('images/escalators.jpg')">
+                    <p class="panel-title">
+                        JavaScript
+                    </p>
+                </div>
+                <div class="panel hidden" style="background-image: url('images/fallingwater.jpg')">
+                    <p class="panel-title">
+                        CSS
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="slide emphasis-slide has-subslides" id="slide-4">
+            <h1>
+                Who should care about CSS?
+            </h1>
+            <div class="logos subslides">
+                <figure class="hidden">
+                    <img class="logo" src="images/icon-code.svg">
+                    <figcaption>Frontend developers</figcaption>
+                </figure>
+                <figure class="hidden">
+                    <img class="logo" src="images/icon-palette.svg">
+                    <figcaption>User interface designers</figcaption>
+                </figure>
+                <figure class="hidden">
+                    <img class="logo" src="images/icon-users.svg">
+                    <figcaption>People who own websites</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="slide" id="slide-5">
+            <h1>Recognize these sites?</h1>
+            <img class="has-next-image websites" data-next-image="websites-styled.png"
+                src="images/websites-unstyled.png">
+        </section>
+        <section class="slide emphasis-slide" id="slide-6">
+            <h1>
+                CSS is the language that makes the web <strong>recognizable</strong> and <strong>beautiful</strong>
+            </h1>
+        </section>
+        <section class="slide has-subslides" id="slide-7">
+            <h1>
+                CSS is generally not well-understood
+            </h1>
+            <ul class="subslides default-list">
+                <li class="hidden">
+                    It's unique &mdash; it doesn't have much in common with programming languages
+                </li>
+                <li class="hidden">
+                    Support for many newer features varies from browser to browser
+                </li>
+                <li class="hidden">
+                    Popular frameworks obscure the details of the language
+                    <div class="logos">
+                        <figure>
+                            <img class="logo" src="images/logo-materialize.svg">
+                            <figcaption class="list-figcaption">Materialize</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="logo" src="images/logo-semantic-ui.png">
+                            <figcaption class="list-figcaption">Semantic UI</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="logo" src="images/logo-uikit.svg">
+                            <figcaption class="list-figcaption">UIkit</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="logo" src="images/logo-bootstrap.svg">
+                            <figcaption class="list-figcaption">Bootstrap</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="logo" src="images/logo-foundation.jpg">
+                            <figcaption class="list-figcaption">Foundation</figcaption>
+                        </figure>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide emphasis-slide" id="slide-8">
+            <h1>
+                A brief overview of CSS fundamentals
+            </h1>
+        </section>
+        <section class="slide" id="slide-9">
+            <h1>Everything is a box</h1>
+            <img class="has-next-image websites" data-next-image="box-model-demo-2.png"
+                src="images/box-model-demo-1.png">
+        </section>
+        <section class="slide has-subslides" id="slide-10">
+            <h1>Also known as the <strong>box model</strong></h1>
+            <div class="column-layout">
+                <div class="box-model-demo box-model-demo-margin">
+                    <h3 class="box-model-demo-title box-model-demo-margin-title">Margin</h3>
+                    <div class="box-model-demo box-model-demo-border">
+                        <h3 class="box-model-demo-title box-model-demo-border-title">Border</h3>
+                        <div class="box-model-demo box-model-demo-padding">
+                            <h3 class="box-model-demo-title box-model-demo-padding-title">Padding</h3>
+                            <div class="box-model-demo box-model-demo-element">
+                                <h3 class="box-model-demo-title ">Element content (image, text, input field, etc.)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="subslides default-list">
+                    <li class="hidden">Margin, border, padding are all optional</li>
+                    <li class="hidden">Padding = space inside of the border</li>
+                    <li class="hidden">Margin = space outside of the border</li>
+                </ul>
+            </div>
+        </section>
+        <section class="slide has-subslides" id="slide-11">
+            <h1>CSS defines rules based on selectors</h1>
+            <ul class="subslides default-list">
+                <li class="hidden">
+                    <strong>Type:</strong> matches all HTML elements of a certain type
+                    <ul>
+                        <li><code class="default-code">img</code> - image</li>
+                        <li><code class="default-code">input</code> - input field</li>
+                        <li><code class="default-code">p</code> - paragraph</li>
+                    </ul>
+                </li>
+                <li class="hidden">
+                    <strong>ID:</strong> custom item name specified using the <code>id</code>
+                    attribute &mdash; can only apply to one element
+                </li>
+                <li class="hidden">
+                    <strong>Class:</strong> custom group name specified using the <code>class</code>
+                    attribute &mdash;can apply to multiple elements
+                </li>
+            </ul>
+        </section>
+        <section class="slide has-subslides" id="slide-12">
+            <h1>Classes are the ideal selector</h1>
+            <div class="subslides panels">
+                <div class="panel hidden" style="background-image: url('images/levittown.jpg')">
+                    <p class="panel-title">
+                        Type selectors
+                    </p>
+                </div>
+                <div class="panel hidden" style="background-image: url('images/walkie-talkie.jpg')">
+                    <p class="panel-title">
+                        ID selectors
+                    </p>
+                </div>
+                <div class="panel hidden" style="background-image: url('images/painted-ladies.JPG')">
+                    <p class="panel-title">
+                        Class selectors
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="slide" id="slide-13">
+            <h1>Styling a paragraph</h1>
+            <div class="column-layout">
+                <p class="col-50 example-paragraph" id="example-paragraph">
+                    Biscuit chocolate cake bonbon lemon drops bonbon apple pie liquorice tootsie roll. Marzipan ice
+                    cream ice cream tiramisu jelly beans lemon drops biscuit. Croissant chocolate bar jelly-o gummi
+                    bears croissant soufflé fruitcake icing.
+                </p>
+                <blockquote class="col-50 code-block-container">
+                    <code class="default-code">.example-paragraph {</code>
+                    <textarea class="default-code code-block editable" data-target-element-id="example-paragraph">
+    font-family: Chalkboard;
+    margin: 0;
+    padding: 0;
+    color: #555;
+    line-height: 0.8em;
+    border: 1px solid red;
+    border-radius: 0;
+                    </textarea>
+                    <code class="default-code">}</code>
+                </blockquote>
+            </div>
+        </section>
+        <section class="slide has-subslides" id="slide-14">
+            <h1>
+                CSS is like a graphics program in code
+            </h1>
+            <div class="subslides column-layout">
+                <div class="col-33 hidden">
+                    <h2>From rounded corners...</h2>
+                    <div class="example rounded-corners-example"></div>
+                </div>
+                <div class="col-33 hidden">
+                    <h2>...to gradients...</h2>
+                    <div class="example gradient-example"></div>
+                </div>
+                <div class="col-33 hidden">
+                    <h2>...to drop shadows...</h2>
+                    <div class="example drop-shadow-example"></div>
+                </div>
+            </div>
+        </section>
+        <section class="slide emphasis-slide has-subslides" id="slide-15">
+            <h1>
+                Creating a circle in CSS
+            </h1>
+            <div class="subslides column-layout">
+                <div class="col-33 hidden">
+                    <div class="example circle-example"></div>
+                    <code class="default-code">border-radius: 0</code>
+                </div>
+                <div class="col-33 hidden">
+                    <div class="example circle-example circle-mid"></div>
+                    <code class="default-code">border-radius: 100px</code>
+                </div>
+                <div class="col-33 hidden">
+                    <div class="example circle-example circle-complete"></div>
+                    <code class="default-code">border-radius: 100%</code>
+                </div>
+            </div>
+        </section>
+        <section class="slide has-subslides" id="slide-16">
+            <h1>
+                Creating a triangle in CSS
+            </h1>
+            <div class="subslides column-layout">
+                <div class="col-33 hidden">
+                    <div class="example triangle-example triangle-box-full"></div>
+                    <code class="default-code">
+                        width: 300px;<br />
+                        height: 300px;<br />
+                        border-width: 32px;
+                    </code>
+                </div>
+                <div class="col-33 hidden">
+                    <div class="example triangle-example triangle-box-empty"></div>
+                    <code class="default-code">
+                        width: 0;<br />
+                        height: 0;<br />
+                        border-width: 150px;
+                    </code>
+                </div>
+                <div class="col-33 hidden">
+                    <div class="example triangle-example triangle"></div>
+                    <code class="default-code">
+                        border-top-color: #fecf6a;<br />
+                        border-left-color: transparent;<br />
+                        border-right-color: transparent;<br />
+                        border-bottom-color: transparent;<br />
+                    </code>
+                </div>
+            </div>
+        </section>
+        <section class="slide has-subslides" id="slide-17">
+            <h1>Creating a cylinder</h1>
+            <div class="subslides column-layout">
+                <div class="col-20 hidden">
+                    <div class="three-d-shape cylinder-example cylinder-start"></div>
+                </div>
+                <div class="col-20 hidden">
+                    <div class="cylinder-circle-step cylinder-top-circle"></div>
+                    <span class="arrow">&darr;</span>
+                    <div class="cylinder-circle-step cylinder-top-oval"></div>
+                </div>
+                <div class="col-20 hidden">
+                    <div class="three-d-shape cylinder-example cylinder-mid"></div>
+                </div>
+                <div class="col-20 hidden">
+                    <div class="cylinder-circle-step cylinder-bottom-circle"></div>
+                    <span class="arrow">&darr;</span>
+                    <div class="cylinder-circle-step cylinder-bottom-oval"></div>
+                </div>
+                <div class="col-20 hidden">
+                    <div class="three-d-shape cylinder-example cylinder-complete"></div>
+                </div>
+        </section>
+        <section class="slide emphasis-slide" id="slide-18">
+            <div class="column-layout">
+                <div class="col-33">
+                    <div class="three-d-shape cylinder-complete"></div>
+                </div>
+                <div class="col-33">
+                    <div class="three-d-shape pyramid">
+                        <div class="pyramid-side"></div>
+                        <div class="pyramid-front"></div>
+                    </div>
+                </div>
+                <div class="col-33">
+                    <div class="three-d-shape cube">
+                        <div class="cube-side"></div>
+                        <div class="cube-front"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide building-slide" id="slide-19">
+            <div class="cloud cloud-1">
+                <div class="cloud-circle cloud-circle-1"></div>
+                <div class="cloud-circle cloud-circle-2"></div>
+                <div class="cloud-circle cloud-circle-3"></div>
+                <div class="cloud-circle cloud-circle-4"></div>
+            </div>
+            <div class="cloud cloud-2">
+                <div class="cloud-circle cloud-circle-1"></div>
+                <div class="cloud-circle cloud-circle-2"></div>
+                <div class="cloud-circle cloud-circle-3"></div>
+                <div class="cloud-circle cloud-circle-4"></div>
+            </div>
+            <div class="building">
+                <div class="building-side">
+                    <ul class="windows-side">
+                        <li class="window window-side"></li>
+                        <li class="window window-side"></li>
+                        <li class="window window-side"></li>
+                        <li class="window window-side"></li>
+                        <li class="window window-side"></li>
+                        <li class="window window-side"></li>
+                        <li class="window window-side"></li>
+                        <li class="window window-side"></li>
+                        <li class="window window-side"></li>
+                    </ul>
+                </div>
+                <div class="building-front">
+                    <ul class="windows-front">
+                        <li class="window window-front"></li>
+                        <li class="window window-front"></li>
+                        <li class="window window-front"></li>
+                        <li class="window window-front"></li>
+                        <li class="window window-front"></li>
+                        <li class="window window-front"></li>
+                        <li class="window window-front"></li>
+                        <li class="window window-front"></li>
+                        <li class="window window-front"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ground-cover">
+                <div class="ground ground-1"></div>
+                <div class="ground ground-2"></div>
+            </div>
+        </section>
+        <section class="slide emphasis-slide" id="slide-20">
+            <h1>
+                CSS animations
+            </h1>
+        </section>
+        <section class="slide emphasis-slide has-subslides" id="slide-21">
+            <h1>A border animation</h1>
+            <div class="subslides column-layout">
+                <div class="col-50 hidden">
+                    <input type="text" class="input-animated" id="input-animated">
+                </div>
+                <div class="col-50 hidden">
+                    <ul class="animations-explained default-code">
+                        <li class="animations-explained-item">0% {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-color: #6acffe;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-style: dotted;<br />
+                            }</li>
+                        <li class="animations-explained-item">100% {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-color: #fecf6a;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-style: dashed;<br />
+                            }</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="slide emphasis-slide" id="slide-22">
+            <div class="soundwaves">
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+                <div class="soundwave"></div>
+            </div>
+        </section>
+        <section class="slide plant-slide" id="slide-23">
+            <div class="plant-scene">
+                <img src="images/icon-sun.svg" class="sun">
+                <div class="seedlings"></div>
+                <div class="soil">
+                    <div class="water"></div>
+
+                </div>
+            </div>
+        </section>
+        <section class="slide" id="slide-24">
+            <h1>Learn more about CSS</h1>
+            <ul class="default-list">
+                <li>
+                    <strong>Mozilla Developer Network docs:</strong> https://developer.mozilla.org/en-US/docs/Learn/CSS
+                </li>
+                <li>
+                    <strong>CSS Tricks:</strong> https://css-tricks.com/
+                </li>
+                <li>
+                    <strong>CSS Reference:</strong> https://cssreference.io/
+                </li>
+            </ul>
+        </section>
+        <section class="slide title-slide" id="slide-25">
+            <h1 class="presentation-title">Thank you!</h1>
+            <p>
+                Stephanie A. Higa<br />
+                https://www.github.com/sahiga<br />
+                https://www.linkedin.com/in/sahiga<br />
+            </p>
+        </section>
+    </main>
+    <script src="slides.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="168" height="155" viewBox="0 0 168 155" xmlns="http://www.w3.org/2000/svg"
+    style="color: rgb(255, 255, 255);" class=" uk-svg" data-svg="./images/uikit-logo-large.svg">
+    <path fill="#fff"
+        d="M117.4 33.3L93.3 47.9l27.8 15.8v41.5L83.8 126l-36.7-20.8V73L23 60.7v58.9l59.9 35.2 62.1-35.2V49.2l-27.6-15.9zM106.2 27.5L82.9 14 58.6 29.1l23.6 13z">
+    </path>
+</svg>

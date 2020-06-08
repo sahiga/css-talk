@@ -1,0 +1,153 @@
+/** Demo slides **/
+
+
+.box-model-demo {
+    color: #222;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-model-demo-margin {
+    background: #fecf6a;
+    padding: 1em;
+    width: 450px;
+    height: 450px;
+}
+
+.box-model-demo-padding {
+    background: #fede99;
+    padding: 1em;
+    margin: 6px;
+    width: 350px;
+    height: 350px;
+}
+
+.box-model-demo-border {
+    position: relative;
+    background: #fdad01;
+    width: 360px;
+    height: 360px;
+}
+
+.box-model-demo-border-title {
+    position: absolute;
+    background: #fdad01;
+    padding: 0.5em;
+    border-radius: 10px;
+    top: -40px;
+}
+
+.box-model-demo-element {
+    background: #fdbe34;
+    padding: 1em;
+    width: 80%;
+    height: 80%;
+
+}
+
+.box-model-demo-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.box-model-demo-margin-title,
+.box-model-demo-padding-title {
+    transform: rotate(270deg);
+}
+
+.default-code {
+    font-family: monospace;
+    font-size: 1.5em;
+}
+
+.code-block {
+    background: transparent;
+    width: 100%;
+    height: 200px;
+    border: 0;
+    color: #222;
+    outline: none;
+}
+
+.code-block::-webkit-scrollbar {
+    display: none;
+}
+
+.column-layout {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.col-50 {
+    margin: 0 0.5em;
+    width: 50%;
+}
+
+.col-33 {
+    margin: 0 0.5em;
+    width: 33%;
+    text-align: center;
+}
+
+.col-20 {
+    margin: 0 0.5em;
+    width: 20%;
+    text-align: center;
+    position: relative;
+}
+
+.example-paragraph {
+    font-family: Chalkboard;
+    margin: 0;
+    padding: 0;
+    color: #555;
+    line-height: 0.8em;
+    border: 1px solid red;
+    border-radius: 0;
+}
+
+.input-animated {
+    background: url('images/icon-search.svg') transparent no-repeat 100%;
+    background-size: 15%;
+    border-width: 0 0 20px 0;
+    border-color: #fecf6a;
+    border-style: solid;
+    color: #ddd;
+    display: block;
+    font-size: 3em;
+    padding: 0.5em 0;
+    margin: 0 auto;
+    outline: none;
+}
+
+@keyframes colorfulBorder {
+  from { border-color: #6acffe; border-style: dotted; }
+  to { border-color: #fecf6a; border-style: dashed; }
+}
+
+.input-animated:hover {
+    animation: colorfulBorder 1s linear infinite;
+}
+
+.animations-explained {
+    list-style: none;
+}
+
+.animations-explained-item {
+    margin: 2em;
+    padding: 1em;
+}
+
+.animations-explained-item:first-child {
+    color: #6acffe;
+    border-bottom: 10px dotted #6acffe;
+}
+
+.animations-explained-item:nth-child(2) {
+    color: #fecf6a;
+    border-bottom: 10px dashed #fecf6a;
+}
