@@ -1,7 +1,6 @@
 (function () {
-    // 1478 x 750 max space
-    const LEFT_BRACKET = 188;
-    const RIGHT_BRACKET = 190;
+    const LEFT_BRACKET = 219;
+    const RIGHT_BRACKET = 221;
 
     const locationHash = location.hash.split('-');
     const slides = document.getElementsByClassName('slide');
@@ -11,6 +10,7 @@
     let slideIndex, currentSlide, subslides;
     let subslideIndex = 0;
 
+    // Save subslides in memory if they are available and haven't already been loaded
     const setSubslides = (slide) => {
         if (!slidesAlreadyLoaded[slideIndex] && /has-subslides/.test(slide.className)) {
             const subslideWrapper = slide.querySelector('.subslides');
@@ -21,6 +21,8 @@
         }
     }
 
+    // If the URL includes an anchor link to a particular slide, set the current slide to that slide
+    // Otherwise, set the current slide to the first slide
     if (locationHash.length > 1) {
         slideIndex = parseInt(locationHash[1], 10);
         currentSlide = slides[slideIndex];
@@ -30,6 +32,7 @@
         currentSlide = slides[0];
     }
 
+    // Show a subslide within the current slide
     const showSubslide = () => {
         subslides[subslideIndex].classList.remove('hidden');
         subslides[subslideIndex].classList.add('visible');
@@ -40,6 +43,7 @@
         }
     }
 
+    // Navigate to the last or next slide, depending on the keyCode
     const navigateToSlide = (keyCode) => {
         if (subslides && keyCode === RIGHT_BRACKET && subslideIndex <= subslides.length - 1) {
             showSubslide();
@@ -56,6 +60,7 @@
         }
     }
 
+    // Add a keydown event to listen for last or next slide requests (via square bracket keys)
     document.body.addEventListener('keydown', event => {
         const { keyCode } = event;
 
@@ -65,12 +70,14 @@
         }
     });
 
+    // Add events to replace image sources on click
     document.querySelectorAll('.has-next-image').forEach(el => el.addEventListener('click', function () {
         const nextImageSrc = `images/${this.dataset.nextImage}`;
         this.className += ' has-fade-in';
         this.src = nextImageSrc;
     }));
 
+    // Add events to update editable CSS textareas on blur
     document.querySelectorAll('.editable').forEach(el => el.addEventListener('blur', function () {
         const targetEl = document.getElementById(this.dataset.targetElementId);
         if (this.value.length > 0) {
